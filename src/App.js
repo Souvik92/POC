@@ -9,32 +9,8 @@ function App() {
             title: 'Substation 1',
             subtitle: 'High Humidity Alarm',
             deviceCount: 5,
-            alarmCount: 1114,
-            eventCount: 18189999999,
-            commStatus: 'Online',
-            values: {
-                temperature: 69,
-                humidity: 78,
-            },
-        },
-        {
-            title: 'Substation 11 ',
-            subtitle: 'High Humidity Alarm',
-            deviceCount: 5,
-            alarmCount: 10,
-            eventCount: 0,
-            commStatus: 'Online',
-            values: {
-                temperature: 69,
-                humidity: 78,
-            },
-        },
-        {
-            title: 'Substation 10 ',
-            subtitle: 'High Humidity Alarm',
-            deviceCount: 5,
-            alarmCount: 0,
-            eventCount: 0,
+            alarmCount: 1,
+            eventCount: 1,
             commStatus: 'Online',
             values: {
                 temperature: 69,
@@ -89,20 +65,9 @@ function App() {
                 humidity: 74,
             },
         },
-        {
-            title: 'Substation 5',
-            subtitle: 'Normal',
-            deviceCount: 1,
-            alarmCount: 0,
-            eventCount: 1,
-            commStatus: 'Online',
-            values: {
-                temperature: 68,
-                humidity: 74,
-            },
-        },
     ])
     return (
+        //the class is added to apply a fixed width to the whole list of grids so that it appears as it is given in the demo
         <Box className={classes.App} mx="auto">
             <SubstationsList substations={substations} />
         </Box>

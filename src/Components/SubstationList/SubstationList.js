@@ -39,7 +39,7 @@ const substationList = props => {
     }
     const heroIcons = val => {
         let eachSubstationValuesKeys = Object.keys(val)
-        //console.log(eachSubstationValuesKeys)
+        //This following code will loop through the eachSubstationValuesKeys array and give the hero component array
         return (
             <>
                 {eachSubstationValuesKeys.map(iconKey => {
@@ -67,6 +67,7 @@ const substationList = props => {
         return (
             <Grid item key={index.toString()}>
                 <ScoreCard
+                    //this style is used instead of grid is to make the resposive code unbrekable for all devices
                     style={{
                         width: '405px',
                         height: '100%',
@@ -120,6 +121,7 @@ const substationList = props => {
                 >
                     {eachSubstation.subtitle.toLowerCase() !==
                     'disconnected' ? (
+                        //The top margin for LIST below is used to align the list items with badge label of the score card
                         <List style={{ marginTop: '7px', maxWidth: '170px' }}>
                             <InfoListItem
                                 title={`${
@@ -177,6 +179,7 @@ const substationList = props => {
                             />
                         </List>
                     ) : (
+                        //This empty state is used for disconnected devices.
                         <Box mx="auto">
                             <EmptyState
                                 title="No Data"
